@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.start{
+    z-index: 2;
+    background-color:#2323276b;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.start-game{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 22px;
+    transform: translate(-50%,-50%);
+    background-color:rgb(218, 11, 11);
+    width: 200px;
+    height: 80px;
+    padding: 30px 0;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    text-align: center;
+    cursor: pointer;
+}
+.max {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    font-size: 22px;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 1px white;
+}
+
+.info-cotainer{
+    
+    width: 676px;
+    background-color: #F6F6F6 ;
+    border: solid red 3PX;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 10PX;
+    border-radius: 3px;
+    margin: 20px auto;
+    padding-right: -10px;
+    
+
+}
+
+.info-cotainer .tries{
+    width: 20%;
+}
+
+.hashira-game{
+    width: 680px;
+    flex-flow: row;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+.hashira-game.stop{
+    pointer-events: none;
+}
+.hashira-game .game-blocks{
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    height: 150px;
+    position: relative;
+    flex: 1 0 150px;
+    margin: 0 10px 10px;
+    cursor: pointer;
+        
+}
+.hashira-game .game-blocks img {
+    width: 140px;
+    height: 140px;
+    margin-top: 3.5px;
+}
+
+.hashira-game .game-blocks .front {
+    background-color: rgb(67, 67, 67);
+    line-height: 150px;
+}
+
+.hashira-game .game-blocks .back {
+    transform: rotateY(180deg);
+    background-color: red;
+}
+.hashira-game .game-blocks .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    border: solid red 3px;
+}
+
+.hashira-game .game-blocks .front:before {
+    content: '?';
+    color: white;
+    font-size: 80px;
+}
+
+.hashira-game .game-blocks.flipped,
+.hashira-game .game-blocks.match {
+transform: rotateY(180deg);
+}
+
+.try {
+    z-index: 3;
+    background-color: #db0e0e6b;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.try span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 30px;
+    transform: translate(-50%, -50%);
+    width: 530px;
+    height: 80px;
+    color: white;
+        text-shadow: 2px 2px 1px black;
+    text-align: center;
+    cursor: pointer;
+}
